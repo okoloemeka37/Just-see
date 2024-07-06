@@ -3,7 +3,6 @@ require_once("action.php");
 $id=$_REQUEST['id'];
 $poll=Q2($id);
 
-
 $rt=lga();
 
 ?>
@@ -39,8 +38,9 @@ $rt=lga();
                     </tr>
                 </thead>
                 <tbody>
-                   
-                <?php foreach ($poll as $pol) { ?>
+                <?php
+                      
+              foreach ($poll as $pol) { ?>
                     <tr>
                        
                         <td><?php echo $pol['party_abbreviation'] ?></td>
@@ -51,7 +51,7 @@ $rt=lga();
 
                       
                     </tr> 
-               <?php } ?>
+               <?php }?>
                    
                    
                 </tbody>
@@ -75,7 +75,7 @@ $rt=lga();
                 </tr>
             </thead>
             <tbody>
-                <!-- Replace this part with dynamic data -->
+                
                 <?php foreach ($rt as $lga) {?>
                     <tr>
                    

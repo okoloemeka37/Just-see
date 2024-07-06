@@ -1,5 +1,5 @@
 <?php
-//require_once("in.php");
+require_once("in.php");
 
 ?>
 
@@ -17,21 +17,27 @@
 
     <div class="container">
         <h1>Store Election Results for New Polling Unit</h1>
-        <form action="in.php" method="POST">
-            <label for="polling_unit_id">Polling Unit ID:</label>
-            <input type="text" id="polling_unit_id" name="id" >
+        <form method="POST">
+            <label >Polling Unit ID:</label>
+            <input type="text"  name="id" >
+            <p class="err"><?php echo $error['id']?></p>
 
             <label for="party_abc_score"> Party Name:</label>
-            <input type="text" id="party_abc_score" name="party" >
+            <input type="text" name="party" >
+            <p class="err"><?php echo  $error['party']?></p>
 
            
             <label for="party_pqr_score">Party Score:</label>
             <input type="text" id="score" name="score" >
+            <p class="err"><?php echo $error['score']?></p>
 
             <label for="party_pqr_score">User Name:</label>
             <input type="text" id="party_pqr_score" name="username" >
 
-            <input type="submit" name="store" value="Store Results">
+   <p class="err"><?php echo $error['name']?></p>
+
+           <button type="submit" name="store">Post</button>
+
         </form>
     </div>
 </body>
